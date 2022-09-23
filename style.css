@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #c5e4e7;
+    flex-direction: column;
+}
+.logo{
+    margin-bottom: 3rem;
+}
+.wrapper{
+    width: 920px;
+    min-height: 483px;
+    background-color: #fff;
+    border-radius: 15px;
+}
+.calculator-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.calculator-input-area{
+    flex: 1;
+    padding: 2rem;
+    color: #687878;
+}
+.calculator-input-area input:nth-of-type(1){
+    margin-bottom: 2rem;
+}
+label{
+    text-transform: capitalize;
+}
+input[type=number]{
+    border: none;
+    width: 100%;
+    background-color: #f3f8fb;
+    padding: 1rem 1rem;
+    border-radius: 10px;
+    color: #687878;
+}
+.bill-input{
+    background-image: url('images/icon-dollar.svg');
+    background-repeat: no-repeat;
+    background-position: 5% center;
+    text-align: right;
+}
+.tip{
+    margin-top: 0.7rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    row-gap: 2rem;
+    column-gap: 18px;
+}
+.tips{
+    background-color: hsl(183, 100%, 15%);
+    color: white;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.active-tip{
+    color: hsl(183, 100%, 15%);
+    background-color: hsl(172, 67%, 45%);
+    font-weight: bolder;
+}
+.people-input{
+    background-image: url('images/icon-person.svg');
+    background-repeat: no-repeat;
+    background-position: 5% center;  
+    text-align: right;
+}
+#tip-custom input{
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+    outline: none;
+}
+input:focus{
+    outline: none;
+}
+.calculator-result-area{
+    flex: 1;
+    background-color: #00474b;
+    width: 412px;
+    height: 417px;
+    margin: 2rem;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.total{
+    padding: 2rem;
+}
+.tipAmount{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.totalAmount{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+.resetAmount{
+    justify-self: flex-end;
+    align-self: center;
+    
+}
+.tipPerPerson span{
+    color: #fff;
+}
+.tipPerPerson span span{
+    color: #687878;
+}
+.totalPerPerson span{
+    color: #fff;
+}
+.totalPerPerson span span{
+    color: #687878;
+}
+.tipResult {
+    color: #28c1ad;
+    font-size: 2rem;
+}
+.totalResult {
+    color: #28c1ad;
+    font-size: 2rem;
+}
+.resetAmount{
+    background-color: #0d686d;
+    color: #00474b;
+    padding: 1rem 2rem;
+    width: 100%;
+    text-align: center;
+    margin: 2rem auto;
+    width: 80%;
+    border-radius: 5px;
+}
+.alert{
+    color: red;
+    text-align: right;
+    display: none;
+}
+.alert.active{
+    display: inline;
+}
+@media screen and (max-width:480px){
+    .wrapper{
+        max-width: 380px;
+        min-height: 483px;
+    }
+    .calculator-area{
+        flex-direction: column;
+    }
+    .logo{
+        margin-top: 3rem;
+    }
+    .tip{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .calculator-result-area{
+        width: 85%;
+        min-height: 250px;
+        justify-content: flex-start;
+    }
+}
